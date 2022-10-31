@@ -36,12 +36,12 @@ int main(int argc, char** argv)
                 if (fd != INVALID_SOCKET)
                 {
                     struct in_addr addr;
-                    inet_aton(saddr, &addr1);
                     struct sockaddr_in addrin;
                     addrin.sin_family = AF_INET;
                     addrin.sin_port = htons(80);
                     addrin.sin_addr = addr;
                     struct sockaddr* saddr = (struct sockaddr*)&addrin;
+                    inet_aton(saddr, &addr);
                     int error = connect(fd, saddr, sizeof(addrin));
                     if (error == 0)
                     {
