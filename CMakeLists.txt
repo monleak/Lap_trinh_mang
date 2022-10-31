@@ -7,5 +7,5 @@ add_executable(run
 #        "tuần 2/ifconfig.c"
 #        "tuần 2/ls-al.c"
 #        "tuần 2/scandir.c"
-        "tuan 3/gethostbyname.c"
-        )
+#        "tuan 3/gethostbyname.c"
+        "tuan 4/SimpleTCPServer.c")
