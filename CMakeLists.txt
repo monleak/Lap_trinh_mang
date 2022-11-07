@@ -10,4 +10,5 @@ add_executable(run
 #        "tuan 3/gethostbyname.c"
 #        "tuan 4/SimpleTCPServer.c"
 #        "tuan 4/SimpleTelnetServer.c"
-        "tuan 4/TestTelnet.c")
+#        "tuan 4/TestTelnet.c"
+        "tuan 5/UDPsample.c" "tuan 5/udpclient.c" "tuan 5/udpserver.c")
