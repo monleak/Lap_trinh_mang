@@ -1,2 +1,3 @@
 # Project exclude paths
 /tuần 2/cmake-build-debug/
+.vscode/
