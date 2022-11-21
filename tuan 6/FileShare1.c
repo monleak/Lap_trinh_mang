@@ -70,7 +70,7 @@ int main()
     {
         if (fork() == 0)
         {
-
+            
         }else
         {
             while (0 == 0)

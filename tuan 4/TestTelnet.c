@@ -57,11 +57,13 @@ int main()
 
         char* pwd = "pwd";
         SendData(cfd, pwd, strlen(pwd));
+
         memset(buffer, 0, sizeof(buffer));
         RecvData(cfd, buffer, sizeof(buffer));
         while (buffer[strlen(buffer) - 1] == '\n')
             buffer[strlen(buffer) - 1] = 0;
         printf("%s#", buffer);
+        
         while (0 == 0)
         {
             fgets(buffer, sizeof(buffer), stdin);

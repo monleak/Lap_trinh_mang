@@ -33,8 +33,8 @@ int main()
     char path[1024] = { 0 };
     char root[1024] = { 0 };
     struct dirent** output = NULL;
-    strcpy(path, "/mnt/c/");
-    strcpy(root, "/mnt/c/");
+    strcpy(path, "/home/monleak/Lap_trinh_mang");
+    strcpy(root, "/home/monleak/Lap_trinh_mang");
     int exit = 0;
     do
     {
@@ -57,7 +57,7 @@ int main()
                 }
             }
             Append(&html, "</html>");
-            FILE* f = fopen("scandir.html","wt");
+            FILE* f = fopen("scandir.html","w");
             fprintf(f, "%s", html);
             fclose(f);
             free(html);

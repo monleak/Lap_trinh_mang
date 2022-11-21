@@ -43,21 +43,22 @@ int RecvData(int fd, char* data, int maxlen)
 
 int main()
 {
-    int sfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    int sfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); //Tạo socket
     SOCKADDR_IN saddr, caddr;
     int clen = sizeof(caddr);
     saddr.sin_family = AF_INET;
     saddr.sin_port = htons(5555);
     saddr.sin_addr.s_addr = inet_addr("127.0.0.1");
-    int error = bind(sfd, (SOCKADDR*)&saddr, sizeof(saddr));
+    int error = bind(sfd, (SOCKADDR*)&saddr, sizeof(saddr)); //gán địa chỉ cho socket 
     if (error != -1)
     {
-        listen(sfd, 10);
-        int cfd = accept(sfd, (SOCKADDR*)&caddr, &clen);
+        listen(sfd, 10); //chỉ định socket lắng nghe kết nối
+        int cfd = accept(sfd, (SOCKADDR*)&caddr, &clen); //chấp nhận kết nối
         if (cfd != INVALID_SOCKET)
         {
-            char* welcome = "Welcome to my first TCP server\n";
+            char* welcome = "Welcome to my first TCP server\n"; //Gửi lời chào đến client
             SendData(cfd, welcome, strlen(welcome));
+
             while (0 == 0)
             {
                 char buffer[1000] = { 0 };

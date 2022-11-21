@@ -1,3 +1,5 @@
 # Project exclude paths
 /tuần 2/cmake-build-debug/
 .vscode/
+tuan 3/gethostbyname
+out.txt
